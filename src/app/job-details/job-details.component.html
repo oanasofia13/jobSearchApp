@@ -1,0 +1,39 @@
+<div>
+    <button class="go-back" (click)="goBack()"><img src="../../assets/icons/back.svg" alt=""></button>
+    <div class="header">
+        <img [src]="jobDetail.companyLogo" alt="{{ jobDetail.companyName }}">
+        <div class="title">
+            <span>
+                {{ jobDetail.companyName }} - {{ jobDetail.title }}
+            </span>
+            <div class="tags">
+                <div class="tag">
+                    <p>{{ jobDetail.industries}}</p>
+                </div>
+                <div class="tag">
+                    <p>{{ jobDetail.types }}</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="content">
+        <span>
+            <h4>Publich date:</h4> {{ jobDetail.publishDate | date }}
+        </span>
+        <span>
+            <h4>Location:</h4> {{ jobDetail.location }}
+        </span>
+        <span>
+            <h4>Reference:</h4> {{jobDetail.reference}}
+        </span>
+        <span>
+            <h4>Description:</h4>
+        </span>
+        <div class="description" [innerHTML]="jobDetail.description"></div>
+
+    </div>
+
+
+</div>

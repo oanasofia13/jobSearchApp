@@ -1,0 +1,23 @@
+<div class="container centered-container">
+    <div class="header">
+        <div class="title">
+            <h1>Find your job</h1>
+        </div>
+
+        <div class="row list-header">
+            <div class="col-6">
+                <button (click)="showLists(1)" [class.active]="isActive('jobs') || isActive('')">
+                    <h3>Jobs</h3>
+                </button>
+            </div>
+            <div class="col-6">
+                <button (click)="showLists(2)" [class.active]="isActive('favorites')">
+                    <h3>Favorites</h3>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="list">
+        <router-outlet></router-outlet>
+    </div>
+</div>
