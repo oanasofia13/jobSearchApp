@@ -1,4 +1,7 @@
 <div class="job-listing">
+    <div *ngIf="favJobs.length === 0" class="no-results">
+        <p>No favorite selected</p>
+    </div>
     <div *ngFor="let job of favJobs" class="job-item">
         <img [src]="job.companyLogo" alt="{{ job.companyName }}">
         <div class="job-details">
@@ -23,7 +26,4 @@
             </svg>
         </button>
     </div>
-</div>
-<div *ngIf="favJobs===[]" class="no-favs">
-    <p>No favorite selected</p>
 </div>

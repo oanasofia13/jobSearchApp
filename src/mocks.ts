@@ -333,7 +333,6 @@ export const mockHandlers = [
     } else {
       favs.push(favId);
     }
-
     return HttpResponse.json(favs, { status: 201 });
   }),
 ];

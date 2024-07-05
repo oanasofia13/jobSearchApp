@@ -20,14 +20,6 @@ export class JobService {
         return this.http.get<JobDetail>(`${this.apiUrl}/${id}`);
     }
 
-    // getFavs(): Observable<Job[]> {
-    //     return this.http.get<Job[]>(`/favorites`);
-    // }
-
-    // postFavs(fav: number): Observable<number[]> {
-    //     return this.http.post<number[]>(`${this.apiUrl}/setFav`, fav);
-    // }
-
     getFavs(): Observable<Job[]> {
         const favoriteIds = this.getFavoriteIds();
         return this.http.get<Job[]>(`${this.apiUrl}`).pipe(

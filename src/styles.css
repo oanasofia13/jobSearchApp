@@ -5,12 +5,10 @@ body {
     font-family: 'Rubik', sans-serif;
     background: linear-gradient(to top,#f5bcd5,#f27521,#e13781,#f24526);
 }
-
 html, body {
   min-height: 100%;
   height: auto;
 }
-
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Abril Fatface', serif;
     font-weight: 400;
@@ -21,18 +19,15 @@ p,span{
     font-weight: 400;
     font-style: normal;
 }
-
 body::-webkit-scrollbar {
   width: 5px;
   height: 5px;
 }
-
 body::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px red;
   border-radius: 10px;
   background: transparent;
 }
-
 body::-webkit-scrollbar-thumb {
   background:#f24526;
   border-radius: 4px;

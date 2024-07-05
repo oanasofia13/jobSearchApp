@@ -5,9 +5,3 @@ export interface Job {
     companyLogo: string;
     reference: string;
 }
-
-
-
-
-
-

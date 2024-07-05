@@ -83,15 +83,17 @@
     font-size: 20px;
     cursor: pointer;
 }
-.favorite-button.active {
+.favorite-button {
     path{
         fill: #f2752180;
 }
 }
-
 path {
     fill:#ffffff;
     &:hover{
         fill:#f2752180;
     }
+}
+.no-results{
+    text-align:center;
 }

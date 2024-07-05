@@ -11,6 +11,7 @@ import { JobService } from '../job.service';
 export class JobDetailsComponent implements OnInit {
 
   jobDetail!: JobDetail;
+  jobIndustries!: string;
 
   constructor(
     private jobService: JobService,
@@ -24,6 +25,7 @@ export class JobDetailsComponent implements OnInit {
       if (jobId) {
         this.jobService.getJobById(jobId).subscribe((jobDetail: JobDetail) => {
           this.jobDetail = jobDetail;
+          this.jobIndustries = jobDetail.industries[0].replace(/&amp;/g, '&')
         });
       }
     });

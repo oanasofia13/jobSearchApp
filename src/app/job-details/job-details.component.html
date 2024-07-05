@@ -1,14 +1,14 @@
-<div>
+<div *ngIf="jobDetail">
     <button class="go-back" (click)="goBack()"><img src="../../assets/icons/back.svg" alt=""></button>
     <div class="header">
-        <img [src]="jobDetail.companyLogo" alt="{{ jobDetail.companyName }}">
+        <img [src]="jobDetail.companyLogo">
         <div class="title">
             <span>
                 {{ jobDetail.companyName }} - {{ jobDetail.title }}
             </span>
             <div class="tags">
                 <div class="tag">
-                    <p>{{ jobDetail.industries}}</p>
+                    <p> {{jobIndustries}} </p>
                 </div>
                 <div class="tag">
                     <p>{{ jobDetail.types }}</p>
@@ -32,8 +32,5 @@
             <h4>Description:</h4>
         </span>
         <div class="description" [innerHTML]="jobDetail.description"></div>
-
     </div>
-
-
 </div>
